@@ -1,0 +1,27 @@
+name: "Mega Uploader"
+author: "Ryanhustler420"
+description: "Upload a folder to mega as zip"
+inputs:
+  folder:
+    description: "the folder to be uploaded"
+    required: true
+  dest-dir:
+    description: "the folder where you want to upload the folder"
+    required: true
+  email:
+    description: "provide your account email address"
+    required: true
+  password:
+    description: "provide your account password"
+    required: true
+outputs:
+  url:
+    description: "url to the uploaded zip file"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  # args:
+  #   - ${{ inputs.folder }}
+branding:
+  icon: upload-cloud
+  color: purple
